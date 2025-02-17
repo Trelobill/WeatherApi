@@ -89,8 +89,9 @@ public class Main {
             String[] weatherParts = response.body().split(" ");
             String temp_c = weatherParts[0];
             String humidity = weatherParts[1];
-            String wind_speed_Kmph = weatherParts[2].substring(1); // Remove the arrow symbol
+            String wind_speed_Kmph = weatherParts[2].substring(1);
             int uv_index = Integer.parseInt(weatherParts[3]);
+            String country = getCountry(city);
             StringBuilder weather_Desc = new StringBuilder();
             for (int i = 4; i < weatherParts.length; i++) {
                 weather_Desc.append(weatherParts[i]).append(" ");
@@ -100,6 +101,7 @@ public class Main {
             weatherData.put("Wind Speed", wind_speed_Kmph);
             weatherData.put("UV Index", String.valueOf(uv_index));
             weatherData.put("Weather Description", weather_Desc.toString().trim());
+            weatherData.put("Country", country);
 
             if (terminal) {
                 System.out.println(ITALIC + CYAN + "\nFound a city in country: " + ORANGE + BOLD + getCountry(city) + RESET + ITALIC + CYAN + ".");
