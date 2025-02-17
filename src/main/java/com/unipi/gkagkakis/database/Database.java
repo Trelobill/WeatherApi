@@ -6,8 +6,8 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Database{
-    public static Connection connect(){
+public class Database {
+    public static Connection connect() {
         //ονομα βασης: weather_app
         String connectionString = "jdbc:sqlite:weather_app.db";
         Connection connection = null;
@@ -19,8 +19,8 @@ public class Database{
         return connection;
     }
 
-    //δημιουργια table στην βαση
-    public static void createTable(){
+    //δημιουργια table στη βαση
+    public static void createTable() {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -38,13 +38,9 @@ public class Database{
             //αν υπαρχει ηδη το table δεν κανει τιποτα αλλιω το δημιουργει
             if (!resultSet.next()) {
                 statement.executeUpdate(createTableSQL);
-                System.out.println(Main.BOLD + Main.YELLOW + "\n------------------DEBUG LOG------------------");
-                System.out.println("Database table created successfully...");
-                System.out.println("--------------------------------------------");
+                coloredDebugLog("Database table created successfully...");
             } else {
-                System.out.println(Main.BOLD + Main.YELLOW + "------------------DEBUG LOG------------------");
-                System.out.println("Database table already exists...");
-                System.out.println("---------------------------------------------");
+                coloredDebugLog("Database table already exists...");
             }
             statement.close();
             connection.close();
@@ -54,7 +50,7 @@ public class Database{
     }
 
     //συναρτηση για insert του search που εγινε
-    public static void insertNewWeatherSearch(String town, Timestamp timestamp, String temp_c, String humidity, String wind_speed_kmph, Integer uv_index, String weather_desc){
+    public static void insertNewWeatherSearch(String town, Timestamp timestamp, String temp_c, String humidity, String wind_speed_kmph, Integer uv_index, String weather_desc) {
         try {
             Connection connection = connect();
             String insertSQL = "INSERT INTO WEATHER_INFO (TOWN, TIMESTAMP, TEMP_C, HUMIDITY, WIND_SPEED_KMPH, UV_INDEX, WEATHER_DESC) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -68,15 +64,19 @@ public class Database{
             preparedStatement.setString(7, weather_desc);
             int count = preparedStatement.executeUpdate();
             if (count > 0) {
-                System.out.println(Main.BOLD + Main.YELLOW + "\n---------------------DEBUG LOG---------------------");
-                System.out.println("1 new weather search inserted into the database...");
-                System.out.println("---------------------------------------------------");
+                coloredDebugLog("1 new weather search inserted into the database...");
             }
             preparedStatement.close();
             connection.close();
         } catch (SQLException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    private static void coloredDebugLog(String message) {
+        System.out.println(Main.BOLD + Main.YELLOW + "\n---------------------DEBUG LOG---------------------");
+        System.out.println(message);
+        System.out.println("---------------------------------------------------");
     }
 
 }

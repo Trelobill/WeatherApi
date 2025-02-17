@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="MainPanel" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="577" y="0" width="689" height="389"/>
+      <xy x="577" y="0" width="751" height="396"/>
     </constraints>
     <properties>
       <background color="-13684172"/>
@@ -55,7 +55,7 @@
           <caretColor color="-5784832"/>
           <font name="Consolas" size="18" style="3"/>
           <foreground color="-5784832"/>
-          <margin top="2" left="6" bottom="2" right="6"/>
+          <margin top="4" left="12" bottom="4" right="12"/>
           <nextFocusableComponent value="e72eb"/>
           <text value=""/>
           <toolTipText value="City Name"/>
@@ -131,7 +131,7 @@
         <properties>
           <font name="Monospaced" size="26" style="1"/>
           <foreground color="-4510931"/>
-          <text value="Humidity"/>
+          <text value="Humidity:"/>
         </properties>
       </component>
       <component id="4b5af" class="javax.swing.JLabel" binding="countryArea">
@@ -203,7 +203,7 @@
         <properties>
           <font name="Arial Black" style="3"/>
           <foreground color="-16747589"/>
-          <text value="*For best results, also add country next to city name!"/>
+          <text value="*For best results, also add country next to city name!  "/>
         </properties>
       </component>
       <component id="e72eb" class="javax.swing.JButton" binding="searchButton" default-binding="true">
