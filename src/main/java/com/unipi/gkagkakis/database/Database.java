@@ -3,6 +3,10 @@ package com.unipi.gkagkakis.database;
 import com.unipi.gkagkakis.main.Main;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -71,6 +75,43 @@ public class Database {
         } catch (SQLException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public static List<Map<String, String>> getStatisticsOfTown(String town) {
+        List<Map<String, String>> results = new ArrayList<>();
+        try {
+            Connection connection = connect();
+            String selectSQL = """
+                    SELECT REPLACE(town, '+', ' ') AS town,
+                           datetime(TIMESTAMP / 1000, 'unixepoch', '+2 hours') AS date,
+                           temp_c,
+                           humidity,
+                           wind_speed_kmph,
+                           uv_index,
+                           weather_desc
+                    FROM WEATHER_INFO
+                    WHERE town LIKE ?
+                    ORDER BY TIMESTAMP;""";
+            PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
+            preparedStatement.setString(1, "%" + town + "%");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Map<String, String> weatherData = new HashMap<>();
+                weatherData.put("Town", resultSet.getString("town"));
+                weatherData.put("Date", resultSet.getString("date"));
+                weatherData.put("Temperature", resultSet.getString("temp_c"));
+                weatherData.put("Humidity", resultSet.getString("humidity"));
+                weatherData.put("Wind Speed", resultSet.getString("wind_speed_kmph"));
+                weatherData.put("UV Index", String.valueOf(resultSet.getInt("uv_index")));
+                weatherData.put("Weather Description", resultSet.getString("weather_desc"));
+                results.add(weatherData);
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return results;
     }
 
     private static void coloredDebugLog(String message) {

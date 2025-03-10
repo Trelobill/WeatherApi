@@ -1,219 +1,339 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.unipi.gkagkakis.GUI.GUI">
-  <grid id="27dc6" binding="MainPanel" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="0" left="0" bottom="0" right="0"/>
+  <tabbedpane id="319" binding="Search">
     <constraints>
-      <xy x="577" y="0" width="751" height="396"/>
+      <xy x="253" y="0" width="1160" height="462"/>
     </constraints>
     <properties>
-      <background color="-13684172"/>
-      <focusable value="false"/>
-      <toolTipText value=""/>
+      <tabPlacement value="1"/>
     </properties>
-    <border type="none"/>
+    <clientProperties>
+      <html.disable class="java.lang.Boolean" value="false"/>
+    </clientProperties>
+    <border type="empty">
+      <font/>
+      <title-color color="-6445644"/>
+    </border>
     <children>
-      <component id="adcbc" class="javax.swing.JLabel">
+      <grid id="203fb" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <tabbedpane title="Search"/>
         </constraints>
-        <properties>
-          <font name="Arial Narrow" size="28" style="1"/>
-          <foreground color="-6614597"/>
-          <text value="Welcome to our weather app!"/>
-        </properties>
-      </component>
-      <component id="6a47d" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial Narrow" size="28" style="1"/>
-          <foreground color="-6614597"/>
-          <text value="Please enter a city to get detailed weather information!"/>
-        </properties>
-      </component>
-      <component id="82018" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="345" height="27"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="6042b" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints border-constraint="Center"/>
+            <properties>
+              <background color="-13684172"/>
+              <focusable value="false"/>
+              <toolTipText value=""/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="3966a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Narrow" size="28" style="1"/>
+                  <foreground color="-6614597"/>
+                  <text value="Welcome to our weather app!"/>
+                </properties>
+              </component>
+              <component id="2cd84" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Narrow" size="28" style="1"/>
+                  <foreground color="-6614597"/>
+                  <text value="Please enter a city to get detailed weather information!"/>
+                </properties>
+              </component>
+              <component id="94346" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="345" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <foreground color="-14042354"/>
+                  <text value="City Name:"/>
+                </properties>
+              </component>
+              <component id="bb97a" class="javax.swing.JTextField" binding="cityName">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="218" height="30"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-11776175"/>
+                  <caretColor color="-5784832"/>
+                  <font name="Consolas" size="18" style="3"/>
+                  <foreground color="-5784832"/>
+                  <margin top="4" left="12" bottom="4" right="12"/>
+                  <nextFocusableComponent value="e72eb"/>
+                  <text value=""/>
+                  <toolTipText value="City Name"/>
+                </properties>
+              </component>
+              <component id="b77af" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="345" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Monospaced" size="26" style="1"/>
+                  <foreground color="-4510931"/>
+                  <text value="Country:"/>
+                  <toolTipText value=""/>
+                </properties>
+              </component>
+              <component id="d0baa" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="345" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Monospaced" size="26" style="1"/>
+                  <foreground color="-4510931"/>
+                  <text value="Temperature:"/>
+                </properties>
+              </component>
+              <component id="5542d" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="345" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Monospaced" size="26" style="1"/>
+                  <foreground color="-4510931"/>
+                  <text value="Wind Speed:"/>
+                </properties>
+              </component>
+              <component id="4ebeb" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="345" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Monospaced" size="26" style="1"/>
+                  <foreground color="-4510931"/>
+                  <text value="UV Index:"/>
+                </properties>
+              </component>
+              <component id="171a3" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="345" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Monospaced" size="26" style="1"/>
+                  <foreground color="-4510931"/>
+                  <text value="Weather Description:"/>
+                </properties>
+              </component>
+              <component id="fbd1d" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="345" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Monospaced" size="26" style="1"/>
+                  <foreground color="-4510931"/>
+                  <text value="Humidity:"/>
+                </properties>
+              </component>
+              <component id="16859" class="javax.swing.JLabel" binding="countryArea">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <foreground color="-4488411"/>
+                  <text value="----"/>
+                </properties>
+              </component>
+              <component id="883eb" class="javax.swing.JLabel" binding="temperatureArea">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <foreground color="-4488411"/>
+                  <text value="----"/>
+                </properties>
+              </component>
+              <component id="4de90" class="javax.swing.JLabel" binding="humidityArea">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <foreground color="-4488411"/>
+                  <text value="----"/>
+                </properties>
+              </component>
+              <component id="4af49" class="javax.swing.JLabel" binding="windSpeedArea">
+                <constraints>
+                  <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <foreground color="-4488411"/>
+                  <text value="----"/>
+                </properties>
+              </component>
+              <component id="a910d" class="javax.swing.JLabel" binding="UVIndexArea">
+                <constraints>
+                  <grid row="8" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <foreground color="-4488411"/>
+                  <text value="----"/>
+                </properties>
+              </component>
+              <component id="4bee1" class="javax.swing.JLabel" binding="weatherDescriptionArea">
+                <constraints>
+                  <grid row="9" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <foreground color="-4488411"/>
+                  <text value="----"/>
+                </properties>
+              </component>
+              <component id="1131f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="345" height="17"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Arial Black" style="3"/>
+                  <foreground color="-16747589"/>
+                  <text value="*For best results, also add country next to city name!  "/>
+                </properties>
+              </component>
+              <component id="33035" class="javax.swing.JButton" binding="searchButton" default-binding="true">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Search"/>
+                </properties>
+              </component>
+            </children>
           </grid>
-        </constraints>
-        <properties>
-          <font size="20"/>
-          <foreground color="-14042354"/>
-          <text value="City Name:"/>
-        </properties>
-      </component>
-      <component id="e5afa" class="javax.swing.JTextField" binding="textField" default-binding="true">
+        </children>
+      </grid>
+      <grid id="8417c" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="218" height="30"/>
+          <tabbedpane title="Statistics"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="416cf" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints border-constraint="Center"/>
+            <properties>
+              <background color="-13684172"/>
+              <focusable value="false"/>
+              <toolTipText value=""/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="6c808" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Narrow" size="28" style="1"/>
+                  <foreground color="-6614597"/>
+                  <text value="Welcome to our weather app!"/>
+                </properties>
+              </component>
+              <component id="b2dc7" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Narrow" size="28" style="1"/>
+                  <foreground color="-6614597"/>
+                  <text value="Please enter a city to get statistics based on date!"/>
+                </properties>
+              </component>
+              <component id="da093" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="345" height="27"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <foreground color="-14042354"/>
+                  <text value="City Name:"/>
+                </properties>
+              </component>
+              <component id="48e56" class="javax.swing.JTextField" binding="cityNameStatistics">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="218" height="30"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-11776175"/>
+                  <caretColor color="-5784832"/>
+                  <font name="Consolas" size="18" style="3"/>
+                  <foreground color="-5784832"/>
+                  <margin top="4" left="12" bottom="4" right="12"/>
+                  <text value=""/>
+                  <toolTipText value="City Name"/>
+                </properties>
+              </component>
+              <component id="443c5" class="javax.swing.JButton" binding="searchButtonStatistics">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Search"/>
+                </properties>
+              </component>
+              <scrollpane id="11b0a">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="b2ef8" class="javax.swing.JTable" binding="statisticsTable">
+                    <constraints/>
+                    <properties>
+                      <autoCreateRowSorter value="true"/>
+                      <selectionBackground color="-14144460"/>
+                    </properties>
+                    <clientProperties>
+                      <JTable.autoStartsEdit class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
           </grid>
-        </constraints>
-        <properties>
-          <background color="-11776175"/>
-          <caretColor color="-5784832"/>
-          <font name="Consolas" size="18" style="3"/>
-          <foreground color="-5784832"/>
-          <margin top="4" left="12" bottom="4" right="12"/>
-          <nextFocusableComponent value="e72eb"/>
-          <text value=""/>
-          <toolTipText value="City Name"/>
-        </properties>
-      </component>
-      <component id="b88b7" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="345" height="27"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Monospaced" size="26" style="1"/>
-          <foreground color="-4510931"/>
-          <text value="Country:"/>
-          <toolTipText value=""/>
-        </properties>
-      </component>
-      <component id="18734" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="345" height="27"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Monospaced" size="26" style="1"/>
-          <foreground color="-4510931"/>
-          <text value="Temperature:"/>
-        </properties>
-      </component>
-      <component id="b8c88" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="345" height="27"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Monospaced" size="26" style="1"/>
-          <foreground color="-4510931"/>
-          <text value="Wind Speed:"/>
-        </properties>
-      </component>
-      <component id="2590d" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="345" height="27"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Monospaced" size="26" style="1"/>
-          <foreground color="-4510931"/>
-          <text value="UV Index:"/>
-        </properties>
-      </component>
-      <component id="38ea0" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="345" height="27"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Monospaced" size="26" style="1"/>
-          <foreground color="-4510931"/>
-          <text value="Weather Description:"/>
-        </properties>
-      </component>
-      <component id="8119f" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="345" height="27"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Monospaced" size="26" style="1"/>
-          <foreground color="-4510931"/>
-          <text value="Humidity:"/>
-        </properties>
-      </component>
-      <component id="4b5af" class="javax.swing.JLabel" binding="countryArea">
-        <constraints>
-          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font size="20"/>
-          <foreground color="-4488411"/>
-          <text value="----"/>
-        </properties>
-      </component>
-      <component id="555d8" class="javax.swing.JLabel" binding="temperatureArea">
-        <constraints>
-          <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font size="20"/>
-          <foreground color="-4488411"/>
-          <text value="----"/>
-        </properties>
-      </component>
-      <component id="fd8bf" class="javax.swing.JLabel" binding="humidityArea">
-        <constraints>
-          <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font size="20"/>
-          <foreground color="-4488411"/>
-          <text value="----"/>
-        </properties>
-      </component>
-      <component id="7a442" class="javax.swing.JLabel" binding="windSpeedArea">
-        <constraints>
-          <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font size="20"/>
-          <foreground color="-4488411"/>
-          <text value="----"/>
-        </properties>
-      </component>
-      <component id="ddf14" class="javax.swing.JLabel" binding="UVIndexArea">
-        <constraints>
-          <grid row="8" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font size="20"/>
-          <foreground color="-4488411"/>
-          <text value="----"/>
-        </properties>
-      </component>
-      <component id="a4edd" class="javax.swing.JLabel" binding="weatherDescriptionArea">
-        <constraints>
-          <grid row="9" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font size="20"/>
-          <foreground color="-4488411"/>
-          <text value="----"/>
-        </properties>
-      </component>
-      <component id="a062d" class="javax.swing.JLabel" binding="Hint">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="345" height="17"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Arial Black" style="3"/>
-          <foreground color="-16747589"/>
-          <text value="*For best results, also add country next to city name!  "/>
-        </properties>
-      </component>
-      <component id="e72eb" class="javax.swing.JButton" binding="searchButton" default-binding="true">
-        <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Search"/>
-        </properties>
-      </component>
+        </children>
+      </grid>
     </children>
-  </grid>
+  </tabbedpane>
 </form>
