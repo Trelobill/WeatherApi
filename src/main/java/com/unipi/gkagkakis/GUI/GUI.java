@@ -62,7 +62,7 @@ public class GUI extends JFrame {
             setLabelsToDefault();
         });
 
-        //listener για οταν παταω enter να πατιεται το Search Button
+        //listener για οταν παταω enter να πατιεται το Search Button για τα στατιστικα
         cityNameStatistics.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {

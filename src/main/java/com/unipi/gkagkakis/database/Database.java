@@ -39,7 +39,7 @@ public class Database {
                     + "WEATHER_DESC TEXT NOT NULL)";
             String checkTableExistsSQL = "SELECT name FROM sqlite_master WHERE type='table' AND name='WEATHER_INFO'";
             ResultSet resultSet = statement.executeQuery(checkTableExistsSQL);
-            //αν υπαρχει ηδη το table δεν κανει τιποτα αλλιω το δημιουργει
+            //αν υπαρχει ηδη το table δεν κανει τιποτα αλλιως το δημιουργει
             if (!resultSet.next()) {
                 statement.executeUpdate(createTableSQL);
                 coloredDebugLog("Database table created successfully...");
@@ -77,6 +77,7 @@ public class Database {
         }
     }
 
+    //συναρτηση για να παρω τα στατιστικα μιας πολης
     public static List<Map<String, String>> getStatisticsOfTown(String town) {
         List<Map<String, String>> results = new ArrayList<>();
         try {
