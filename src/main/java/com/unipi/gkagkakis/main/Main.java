@@ -52,7 +52,7 @@ public class Main {
                 String[] words = option.split("\\s+");
                 if (words[0].equalsIgnoreCase("search")) {
                     if (words.length > 1) {
-                        String city = option.substring(option.indexOf(" ") + 1).replaceAll("\\s+", "+");
+                        String city = option.substring(option.indexOf(" ") + 1);
                         handleSearchStatistics(city);
                     } else {
                         System.out.println(RED + BOLD + "Please enter a city name after 'search'!");
